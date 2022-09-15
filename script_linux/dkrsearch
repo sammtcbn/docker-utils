@@ -1,0 +1,18 @@
+#!/bin/bash
+ME=$(basename $0)
+
+function usage() {
+    echo "Usage: ${ME} [query_string]"
+    echo "example:"
+    echo "    ${ME} redis"
+    exit 1
+}
+
+if [ -z "${1}" ]; then
+    usage
+fi
+
+str=${1}
+
+echo docker search ${str}
+docker search ${str}
