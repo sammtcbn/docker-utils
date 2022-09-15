@@ -1,0 +1,16 @@
+#!/bin/bash
+echo docker network prune -f
+docker network prune -f
+echo
+
+echo docker volume prune -f
+docker volume prune -f
+echo
+
+echo docker network ls
+docker network ls
+echo
+
+echo docker volume ls
+docker volume ls
+echo
