@@ -16,3 +16,10 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin 
 
 # Install Docker Compose
 sudo apt -y install docker-compose || exit 1
+
+docker -v
+
+sudo usermod -aG docker ${USER}
+
+# reload the user groups
+newgrp docker
