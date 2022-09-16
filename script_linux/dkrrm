@@ -2,7 +2,7 @@
 ME=$(basename $0)
 
 function usage() {
-    echo "Usage: ${ME} [Container_ID]"
+    echo "Usage: ${ME} [Container_ID_1] [Container_ID_2] ..."
     exit 1
 }
 
@@ -10,7 +10,11 @@ if [ -z "${1}" ]; then
     usage
 fi
 
-ctrid=${1}
+#ctrid=${1}
+#echo docker rm -f ${ctrid}
+#docker rm -f ${ctrid}
 
-echo docker rm -f ${ctrid}
-docker rm -f ${ctrid}
+for ctrid in $@; do
+    echo docker rm -f ${ctrid}
+    docker rm -f ${ctrid}
+done
