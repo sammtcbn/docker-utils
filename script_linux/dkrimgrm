@@ -2,7 +2,7 @@
 ME=$(basename $0)
 
 function usage() {
-    echo "Usage: ${ME} [Image_Name]"
+    echo "Usage: ${ME} [Image_Name_1] [Image_Name_2] ..."
     exit 1
 }
 
@@ -10,7 +10,11 @@ if [ -z "${1}" ]; then
     usage
 fi
 
-name=${1}
+#name=${1}
+#echo docker rmi -f ${name}
+#docker rmi -f ${name}
 
-echo docker rmi -f ${name}
-docker rmi -f ${name}
+for imgname in $@; do
+    echo docker rmi -f ${imgname}
+    docker rmi -f ${imgname}
+done
