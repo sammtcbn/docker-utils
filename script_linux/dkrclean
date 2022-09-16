@@ -7,6 +7,10 @@ echo docker volume prune -f
 docker volume prune -f
 echo
 
+echo docker container prune -f
+docker container prune -f
+echo
+
 echo docker network ls
 docker network ls
 echo
@@ -14,3 +18,6 @@ echo
 echo docker volume ls
 docker volume ls
 echo
+
+echo docker ps -a
+docker ps -a
