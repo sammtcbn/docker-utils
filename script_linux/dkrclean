@@ -13,7 +13,11 @@ echo
 
 # remove none tag images
 # refer to https://stackoverflow.com/questions/33913020/docker-remove-none-tag-images
-docker image rm -f $(docker images -f dangling=true -q)
+#docker image rm -f $(docker images -f dangling=true -q)
+imgs=$(docker images -f dangling=true -q)
+if [ ! -z "${imgs}" ]; then
+    docker image rm -f ${imgs}
+fi
 
 echo docker network ls
 docker network ls
