@@ -14,7 +14,10 @@ fi
 #echo docker rmi -f ${name}
 #docker rmi -f ${name}
 
-for imgname in $@; do
-    echo docker rmi -f ${imgname}
-    docker rmi -f ${imgname}
-done
+#for imgname in $@; do
+#    echo docker rmi -f ${imgname}
+#    docker rmi -f ${imgname}
+#done
+
+echo docker rmi -f $@
+docker rmi -f $@

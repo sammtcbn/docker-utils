@@ -14,7 +14,10 @@ fi
 #echo docker rm -f ${ctrid}
 #docker rm -f ${ctrid}
 
-for ctrid in $@; do
-    echo docker rm -f ${ctrid}
-    docker rm -f ${ctrid}
-done
+#for ctrid in $@; do
+#    echo docker rm -f ${ctrid}
+#    docker rm -f ${ctrid}
+#done
+
+echo docker rm -f $@
+docker rm -f $@
