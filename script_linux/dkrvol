@@ -1,3 +1,8 @@
 #!/bin/bash
-echo docker volume ls
-docker volume ls
+if [ -z "${1}" ]; then
+  echo docker volume ls
+  docker volume ls
+else
+  echo docker volume inspect $@
+  docker volume inspect $@
+fi
