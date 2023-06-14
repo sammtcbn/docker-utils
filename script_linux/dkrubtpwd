@@ -1,0 +1,3 @@
+#!/bin/bash
+# A script to quickly luanch ubuntu container and mount current path
+docker run --name ubuntu --rm -it -v $(pwd):/root/workspace --workdir="/root/workspace" ubuntu bash
