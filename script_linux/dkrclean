@@ -33,3 +33,7 @@ echo
 
 echo docker ps -a
 docker ps -a
+echo
+
+echo docker system df
+docker system df
