@@ -1,0 +1,3 @@
+#!/bin/bash
+# A script to quickly attach to ubuntu container
+docker exec -it ubuntu bash
