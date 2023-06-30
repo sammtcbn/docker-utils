@@ -3,11 +3,18 @@ ME=$(basename $0)
 
 function usage() {
     echo "Usage: ${ME} [Container_ID]"
-    exit 1
+}
+
+function container_list() {
+    echo
+    echo Container list:
+    docker ps -a
 }
 
 if [ -z "${1}" ]; then
     usage
+    container_list
+    exit 1
 fi
 
 cid=${1}
