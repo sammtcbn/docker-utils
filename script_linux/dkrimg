@@ -1,3 +1,8 @@
 #!/bin/bash
-echo docker image ls
-docker image ls
+if [ -z "${1}" ]; then
+  echo docker image ls
+  docker image ls
+else
+  echo docker image inspect $@
+  docker image inspect $@
+fi

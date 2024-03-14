@@ -1,6 +1,11 @@
 #!/bin/bash
-echo docker ps -a
-docker ps -a
-echo
-echo docker image ls
-docker image ls
+if [ -z "${1}" ]; then
+  echo docker ps -a
+  docker ps -a
+  echo
+  echo docker image ls
+  docker image ls
+else
+  echo docker container inspect $@
+  docker container inspect $@
+fi
